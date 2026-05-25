@@ -1,0 +1,77 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
+provider: Sumsub
+providerId: sumsub
+created: '2026-05-25'
+modified: '2026-05-25'
+tags:
+  - AML
+  - Identity Verification
+  - KYC
+  - Quotas
+  - Rate Limiting
+  - Throttling
+description: Machine-readable rate limit definitions for the Sumsub API. Sumsub does not publish a
+  fixed public per-key rate limit on the API reference; values below are scaffold defaults reflecting
+  typical Cockpit-tier behavior and should be reconciled with contractual or account-specific limits.
+headers:
+  retryAfter: Retry-After
+responseCodes:
+  throttled: 429
+  serviceUnavailable: 503
+limits:
+  - tier: trial
+    name: Trial Verification Quota
+    scope: account
+    metric: verifications_per_trial
+    limit: 50
+    timeFrame: trial
+    applies:
+      - Sumsub API
+  - tier: basic
+    name: Basic Plan Steady-State
+    scope: api-key
+    metric: requests_per_minute
+    limit: 60
+    burst: 120
+    timeFrame: minute
+    applies:
+      - Sumsub API
+  - tier: compliance
+    name: Compliance Plan Steady-State
+    scope: api-key
+    metric: requests_per_minute
+    limit: 120
+    burst: 240
+    timeFrame: minute
+    applies:
+      - Sumsub API
+  - tier: enterprise
+    name: Enterprise Negotiated Limit
+    scope: contract
+    metric: requests_per_minute
+    limit: 600
+    burst: 1200
+    timeFrame: minute
+    applies:
+      - Sumsub API
+policies:
+  - name: App Token Authentication
+    description: All requests must include an X-App-Token header. Limits are enforced per token; rotate
+      tokens via the Cockpit dashboard.
+  - name: Backoff Strategy
+    description: Clients should implement exponential backoff with jitter when 429 or 503 responses are
+      received, honoring the Retry-After header when present.
+  - name: Webhook Delivery
+    description: Sumsub retries failed webhook deliveries with backoff; consumers should respond with a
+      2xx within the documented timeout window to avoid suspension of delivery.
+  - name: Fair Use
+    description: Even on uncapped enterprise contracts, sustained traffic that materially impacts shared
+      verification infrastructure may be throttled per fair-use terms.
+  - name: Sandbox Isolation
+    description: Sandbox traffic is metered separately from production and may have stricter limits to
+      prevent abuse of free trial volume.
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

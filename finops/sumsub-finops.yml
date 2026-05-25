@@ -1,0 +1,186 @@
+specification: FinOps Framework
+specificationVersion: '1.0'
+alignedWith:
+  framework: FinOps Foundation Framework
+  frameworkUrl: https://www.finops.org/framework/
+  dataSpec: FOCUS
+  dataSpecVersion: '1.3'
+  dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
+provider: Sumsub
+providerId: sumsub
+publisherName: Sumsub
+serviceCategory: API
+created: '2026-05-25'
+modified: '2026-05-25'
+tags:
+  - AML
+  - Compliance
+  - Cost Management
+  - FinOps
+  - FOCUS
+  - Identity Verification
+  - KYC
+description: FinOps framework definition for the Sumsub verification platform. Provides a FOCUS-aligned
+  mapping for cost allocation, usage measurement, and unit-economics reporting across KYC, KYB, AML,
+  transaction monitoring, and Travel Rule consumption. Pricing is per successful verification, making
+  per-verification unit economics the primary cost lens.
+principles:
+  - name: Visibility
+    description: Make per-verification spend, failure rates, and AML screening volumes visible to
+      compliance, product, and finance teams in near real-time.
+  - name: Allocation
+    description: Tag every billable verification with the consuming business line, product, geography,
+      verification level, and applicant cohort so cost can be allocated to revenue-generating activity.
+  - name: Optimization
+    description: Continuously evaluate verification level configuration, document type mix, Non-Doc
+      eligibility, and re-verification policies to reduce cost per successfully onboarded customer.
+  - name: Accountability
+    description: Establish budget owners and chargeback or showback flows for each business line
+      consuming KYC, KYB, and AML services.
+domains:
+  - name: Understand Usage and Cost
+    capabilities:
+      - Data Ingestion
+      - Allocation
+      - Reporting and Analytics
+      - Anomaly Management
+  - name: Quantify Business Value
+    capabilities:
+      - Planning and Estimating
+      - Forecasting
+      - Budgeting
+      - Benchmarking
+      - Unit Economics
+  - name: Optimize Usage and Cost
+    capabilities:
+      - Architecting for Cloud
+      - Rate Optimization
+      - Workload Optimization
+      - Cloud Sustainability
+      - Licensing and SaaS
+  - name: Manage the FinOps Practice
+    capabilities:
+      - FinOps Practice Operations
+      - FinOps Education and Enablement
+      - Invoicing and Chargeback
+      - Onboarding Workloads
+      - Intersecting Disciplines
+billingModel:
+  pricingCategory: Usage-Based
+  billingFrequency: Monthly
+  billingCurrency: USD
+  chargeCategories:
+    - Usage
+    - Purchase
+    - Tax
+    - Credit
+    - Adjustment
+  chargeFrequency: Recurring
+  commitments:
+    - name: Basic Monthly Minimum
+      amount: '149.00'
+      currency: USD
+      frequency: Monthly
+    - name: Compliance Monthly Minimum
+      amount: '299.00'
+      currency: USD
+      frequency: Monthly
+focusColumns:
+  ServiceName: Sumsub
+  ServiceCategory: Identity Verification / Compliance API
+  ProviderName: Sumsub
+  PublisherName: Sumsub
+  InvoiceIssuerName: Sumsub
+  PricingCategory: Usage-Based
+  PricingUnit: verification
+  BillingCurrency: USD
+  ChargeCategory: Usage
+meters:
+  - name: successful_verifications
+    description: Count of successful applicant verifications (primary billable unit). Charged at the
+      per-verification price of the active plan.
+    unit: verification
+    aggregation: sum
+    dimensions:
+      - api
+      - verification_level
+      - applicant_type
+      - country
+      - business_line
+      - environment
+  - name: aml_screenings
+    description: Count of AML, sanctions, PEP, and adverse media screenings performed on applicants.
+    unit: screening
+    aggregation: sum
+    dimensions:
+      - api
+      - watchlist
+      - country
+      - business_line
+  - name: ongoing_monitoring_subjects
+    description: Number of applicants under ongoing AML monitoring at end of billing period.
+    unit: subject
+    aggregation: max
+    dimensions:
+      - api
+      - business_line
+      - country
+  - name: transaction_monitoring_events
+    description: Number of transactions evaluated by Sumsub transaction monitoring rules and models.
+    unit: transaction
+    aggregation: sum
+    dimensions:
+      - api
+      - asset_class
+      - business_line
+      - country
+  - name: travel_rule_messages
+    description: Number of Travel Rule counterparty messages exchanged with other VASPs.
+    unit: message
+    aggregation: sum
+    dimensions:
+      - api
+      - counterparty
+      - asset
+apis:
+  - name: Sumsub API
+    baseURL: https://api.sumsub.com
+    tags:
+      - Applicants
+      - AML
+      - Authentication
+      - Business Verification
+      - Case Management
+      - Checks
+      - Crypto Transactions
+      - Device Intelligence
+      - Documents
+      - Identity Verification
+      - KYB
+      - KYC
+      - Non-Doc Verification
+      - Payment Methods
+      - Reports
+      - Screening
+      - Transaction Monitoring
+      - Travel Rule
+      - Verification Levels
+      - Webhooks
+    serviceName: Sumsub
+    serviceCategory: API
+unitEconomics:
+  - name: Cost per Successful Verification
+    metric: billed_cost / successful_verifications
+    target: '1.35-1.85'
+  - name: Cost per Onboarded Customer
+    metric: billed_cost / unique_onboarded_applicants
+    target: TBD
+  - name: AML Screening Cost Ratio
+    metric: aml_screening_cost / billed_cost
+    target: TBD
+  - name: Verification Pass Rate
+    metric: successful_verifications / total_verification_attempts
+    target: '0.93'
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

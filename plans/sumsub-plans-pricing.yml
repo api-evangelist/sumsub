@@ -1,0 +1,161 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: Sumsub
+providerId: sumsub
+created: '2026-05-25'
+modified: '2026-05-25'
+tags:
+  - AML
+  - Compliance
+  - Fraud Prevention
+  - Identity Verification
+  - KYB
+  - KYC
+description: Machine-readable plans and pricing for the Sumsub verification platform. Captures the
+  provider-published Basic, Compliance, and Enterprise tiers with per-verification pricing, monthly
+  minimums, and tier inclusions. Conforms to the API Commons Plans 0.1 schema.
+plans:
+  - id: sumsub-trial
+    name: Free Trial
+    type: freemium
+    description: 14-day free trial offering 50 free verification checks. Intended for evaluation and
+      integration testing before selecting a paid tier.
+    entries:
+      - label: Verifications
+        description: Number of verification checks included during the trial
+        name: verifications
+        type: quota
+        metric: verifications
+        limit: 50
+        timeFrame: trial
+        geo: global
+        domains: []
+        unit: 1
+        price: '0.00'
+        userMultiplied: false
+    elements:
+      - name: 14-Day Evaluation Window
+      - name: Sandbox Access
+      - name: Documentation
+      - name: Sumsub API
+  - id: sumsub-basic
+    name: Basic
+    type: paid
+    description: Per-verification pricing for non-regulated businesses focused on fraud deterrence.
+      $1.35 per successful verification with a $149 minimum monthly commitment. Customers are only
+      charged for successful verifications.
+    entries:
+      - label: Per-Verification Price
+        description: Price per successful verification on the Basic plan
+        name: verification_price
+        type: metered
+        metric: verifications
+        limit: -1
+        timeFrame: month
+        geo: global
+        domains: []
+        unit: 1
+        price: '1.35'
+        userMultiplied: false
+      - label: Monthly Minimum
+        description: Minimum monthly commitment for the Basic plan
+        name: monthly_minimum
+        type: commitment
+        metric: usd
+        limit: 149
+        timeFrame: month
+        geo: global
+        domains: []
+        unit: 1
+        price: '149.00'
+        userMultiplied: false
+    elements:
+      - name: KYC Verification
+      - name: Document Verification
+      - name: Liveness Checks
+      - name: Fraud Deterrence
+      - name: Web and Mobile SDKs
+      - name: Sumsub API
+  - id: sumsub-compliance
+    name: Compliance
+    type: paid
+    description: Targets regulated businesses needing AML screening, ongoing monitoring, and proof
+      of address verification. $1.85 per successful verification with a $299 minimum monthly commitment.
+    entries:
+      - label: Per-Verification Price
+        description: Price per successful verification on the Compliance plan
+        name: verification_price
+        type: metered
+        metric: verifications
+        limit: -1
+        timeFrame: month
+        geo: global
+        domains: []
+        unit: 1
+        price: '1.85'
+        userMultiplied: false
+      - label: Monthly Minimum
+        description: Minimum monthly commitment for the Compliance plan
+        name: monthly_minimum
+        type: commitment
+        metric: usd
+        limit: 299
+        timeFrame: month
+        geo: global
+        domains: []
+        unit: 1
+        price: '299.00'
+        userMultiplied: false
+    elements:
+      - name: KYC Verification
+      - name: AML Screening
+      - name: Ongoing Monitoring
+      - name: Proof of Address Verification
+      - name: PEP and Sanctions Screening
+      - name: Web and Mobile SDKs
+      - name: Sumsub API
+  - id: sumsub-enterprise
+    name: Enterprise
+    type: enterprise
+    description: Custom-negotiated tier providing the full Sumsub suite including KYB, transaction
+      monitoring, Travel Rule, fraud and device intelligence, dedicated support, contractual SLAs,
+      and data residency options.
+    entries:
+      - label: Verifications
+        description: Negotiated verification volume; -1 indicates uncapped subject to contract
+        name: verifications
+        type: quota
+        metric: verifications
+        limit: -1
+        timeFrame: month
+        geo: configurable
+        domains: []
+        unit: 1
+        price: custom
+        userMultiplied: false
+      - label: Per-Verification Price
+        description: Volume-negotiated per-verification price
+        name: verification_price
+        type: metered
+        metric: verifications
+        limit: -1
+        timeFrame: month
+        geo: configurable
+        domains: []
+        unit: 1
+        price: custom
+        userMultiplied: false
+    elements:
+      - name: Full KYC, KYB, AML Suite
+      - name: Transaction Monitoring
+      - name: Travel Rule
+      - name: Fraud and Device Intelligence
+      - name: Case Management
+      - name: Dedicated Account Manager
+      - name: Contractual SLA
+      - name: Data Residency Options
+      - name: Sumsub API
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
