@@ -92,7 +92,7 @@ common:
   - url: https://cockpit.sumsub.com/checkus
     type: Login
   - url: https://sumsub.com/contact-us/
-    type: SignUp
+    type: Signup
   - url: https://docs.sumsub.com/docs/about-web-sdk
     type: SDKs
   - url: https://github.com/SumSubstance
