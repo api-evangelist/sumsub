@@ -23,6 +23,27 @@ apis:
       - Transaction Monitoring
       - Travel Rule
       - Verification Levels
+      - Webhook
+    tags_raw:
+      - Applicants
+      - AML
+      - Authentication
+      - Business Verification
+      - Case Management
+      - Checks
+      - Crypto Transactions
+      - Device Intelligence
+      - Documents
+      - Identity Verification
+      - KYB
+      - KYC
+      - Non-Doc Verification
+      - Payment Methods
+      - Reports
+      - Screening
+      - Transaction Monitoring
+      - Travel Rule
+      - Verification Levels
       - Webhooks
     humanURL: https://docs.sumsub.com/reference
     baseURL: https://api.sumsub.com
