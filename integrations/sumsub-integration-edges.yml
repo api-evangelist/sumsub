@@ -1,0 +1,45 @@
+edges:
+- partner_name: Kantara Initiative (Trust Status List)
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://kantarainitiative.org/trust-status-list/
+  category: Identity assurance certification
+  contract_reference:
+    register: Kantara Initiative Trust Status List (kantarainitiative.org/trust-status-list)
+    spec_file: null
+    standard: Kantara Identity Assurance (NIST SP 800-63)
+    role: kantara-registered-applicant
+    registered_name: Sumsub
+    register_id: Sumsub
+    website: www.sumsub.com
+    matched_domain: sumsub.com
+    matched_by: domain
+    kantara_services:
+    - service: Sumsub Identity Verification Service (NIST)
+      scheme: NIST 800-63 rev.3
+      assurance_levels: IAL2; IAL3
+      status: ''
+      approval: null
+      expiry: '2027-03-31'
+      table: registered_applicants
+    signal_note: certified_products = one entry per approved service TYPE (Full / Component / Classic), lapsed unless
+      Good Standing and inside the triennial approval; registered applicants are participation only; services and
+      assurance levels are context
+    detected_by: sweep-regtech-aml.py
+    detected: '2026-10-15'
+  detected_by: sweep-regtech-aml.py
+  first_seen: '2026-10-15'
+generated: '2026-10-15'
+method: searched
+source:
+- https://msb.fincen.gov/
+- https://www.access-dvs-register.service.gov.uk/register/download-register
+- https://kantarainitiative.org/trust-status-list/
+checked:
+- https://kantarainitiative.org/trust-status-list/
+- https://msb.fincen.gov/
+- https://www.access-dvs-register.service.gov.uk/register/download-register
