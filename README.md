@@ -1,4 +1,4 @@
-# Sumsub (sumsub)
+# Sumsub
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,176 +66,114 @@
 
 Sumsub is a London-headquartered global verification platform offering an integrated full-cycle solution for KYC, KYB, AML screening, transaction monitoring, Travel Rule compliance, and fraud prevention. Founded in 2015 and serving 4,000+ companies worldwide, Sumsub processes millions of verifications daily across 220+ countries and 14,000+ document types, with AI-driven risk analysis, biometric liveness, deepfake detection, and case management delivered through a REST API, web and mobile SDKs (iOS, Android, React Native), no-code Unilink flows, and a Cockpit dashboard.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/sumsub/refs/heads/main/apis.yml)
+**Areas:** AML · Compliance · Fraud Prevention · Identity Verification · KYB · KYC · Transaction Monitoring · Travel Rule
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+## Sumsub on APIs.io
 
-## Tags
+Everything profiled for Sumsub is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/sumsub/](https://apis.io/providers/sumsub/)** — or go straight to one of the APIs or properties below.
 
-- AML
-- Compliance
-- Fraud Prevention
-- Identity Verification
-- KYB
-- KYC
-- Transaction Monitoring
-- Travel Rule
+### APIs (1)
 
-## Timestamps
+- [Sumsub API](https://apis.io/apis/sumsub/sumsub-api/) — Sumsub's REST API provides programmatic access to a full-stack verification platform spanning identity verification (KYC), business verification (KYB), AML…
 
-- **Created:** 2026-05-25
-- **Modified:** 2026-05-25
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### Sumsub API
+#### Security (2)
 
-Sumsub's REST API provides programmatic access to a full-stack verification platform spanning identity verification (KYC), business verification (KYB), AML screening, transaction monitoring, Travel Rule compliance, fraud and device intelligence, and case management. Authentication uses App Tokens via the X-App-Token header against api.sumsub.com, with JSON responses and webhooks (including applicantReviewed) for asynchronous verification outcomes.
+Authentication, trust centre, and vulnerability disclosure.
 
-**Human URL:** [https://docs.sumsub.com/reference](https://docs.sumsub.com/reference)
+- [Sumsub Domain Security](https://apis.io/security/sumsub/sumsub-domain-security/)
+- [Sumsub Vulnerability Disclosure](https://apis.io/security/sumsub/sumsub-vulnerability-disclosure/)
 
-**Base URL:** `https://api.sumsub.com`
+#### Plans and pricing (1)
 
-#### Tags
+Published plans, tiers and prices.
 
-- Applicants
-- AML
-- Authentication
-- Business Verification
-- Case Management
-- Checks
-- Crypto Transactions
-- Device Intelligence
-- Documents
-- Identity Verification
-- KYB
-- KYC
-- Non-Doc Verification
-- Payment Methods
-- Reports
-- Screening
-- Transaction Monitoring
-- Travel Rule
-- Verification Levels
-- Webhooks
+- [Sumsub Plans Pricing](https://apis.io/plans/sumsub/sumsub-plans-pricing/)
 
-#### Properties
+#### Rate limits (1)
 
-- [Documentation](https://docs.sumsub.com/)
-- [APIReference](https://docs.sumsub.com/reference)
-- [GettingStarted](https://docs.sumsub.com/reference/about-sumsub-api)
-- [Authentication](https://docs.sumsub.com/reference/about-sumsub-api#app-tokens)
-- [Webhooks](https://docs.sumsub.com/docs/webhooks)
-- [Postman](https://github.com/SumSubstance/PostmanCollection)
-- [ChangeLog](https://docs.sumsub.com/changelog)
+Published request limits.
 
-## Common Properties
+- [Sumsub Rate Limits](https://apis.io/rate-limits/sumsub/sumsub-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Sumsub Finops](https://apis.io/finops/sumsub/sumsub-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://sumsub.com/)
 - [Documentation](https://docs.sumsub.com/)
-- [APIReference](https://docs.sumsub.com/reference)
-- [GettingStarted](https://docs.sumsub.com/docs/overview)
-- [DeveloperPortal](https://docs.sumsub.com/docs/overview-development)
-- [Console](https://cockpit.sumsub.com/)
-- [Login](https://cockpit.sumsub.com/checkus)
-- [SignUp](https://sumsub.com/contact-us/)
-- [SDKs](https://docs.sumsub.com/docs/about-web-sdk)
-- [GitHubOrganization](https://github.com/SumSubstance)
-- [Postman](https://github.com/SumSubstance/PostmanCollection)
-- [ChangeLog](https://docs.sumsub.com/changelog)
-- [Webhooks](https://docs.sumsub.com/docs/webhooks)
-- [StatusPage](https://status.sumsub.com/)
-- [Blog](https://sumsub.com/media/)
+- [Getting started](https://docs.sumsub.com/docs/overview)
+- [API reference](https://docs.sumsub.com/reference)
 - [Pricing](https://sumsub.com/pricing/)
-- [About](https://sumsub.com/about/)
-- [Careers](https://sumsub.com/careers/)
 - [Support](https://sumsub.com/contact-us/)
-- [FAQ](https://docs.sumsub.com/page/faq)
+- [Changelog](https://docs.sumsub.com/changelog)
+- [Blog](https://sumsub.com/media/)
 - [Security](https://sumsub.com/security/)
-- [PrivacyPolicy](https://sumsub.com/privacy-notice/)
-- [TermsOfService](https://sumsub.com/terms-of-use/)
-- [LinkedIn](https://www.linkedin.com/company/sum-and-substance)
-- [Twitter](https://twitter.com/sumsubcom)
-- [YouTube](https://www.youtube.com/c/Sumsub)
-- [Plans](plans/sumsub-plans-pricing.yml)
-- [RateLimits](rate-limits/sumsub-rate-limits.yml)
-- [FinOps](finops/sumsub-finops.yml)
+- [Terms of service](https://sumsub.com/terms-of-use/)
+- [Privacy policy](https://sumsub.com/privacy-notice/)
+- [GitHub](https://github.com/SumSubstance)
+- [Status](https://status.sumsub.com/)
 
-## Features
+## API Evangelist rating
 
-| Name | Description |
-|------|-------------|
-| Identity Verification (KYC) | Document, biometric, liveness, and database checks across 220+ countries and 14,000+ ID document types. |
-| Business Verification (KYB) | Streamlined onboarding for companies including UBO discovery, corporate registry lookups, and director screening. |
-| AML Screening and Ongoing Monitoring | Sanctions, PEP, and adverse media screening with continuous monitoring of applicants against global watchlists. |
-| Transaction Monitoring | Rule and ML-driven detection of suspicious activity across fiat and crypto transactions for regulatory compliance. |
-| Travel Rule Compliance | VASP-to-VASP counterparty data exchange to satisfy FATF Travel Rule obligations for crypto transfers. |
-| Fraud and Device Intelligence | Device fingerprinting, deepfake detection, and behavioral signals used to block fraud rings and synthetic identities. |
-| Non-Doc Verification | Database-only identity confirmation in supported regions without requiring a physical document upload. |
-| Case Management | Unified dashboard for compliance reviewers to triage applicants, escalate cases, and capture audit notes. |
-| No-Code Unilink and Hosted Flows | Shareable verification links and QR codes for fast deployment without writing integration code. |
-| Web and Mobile SDKs | First-party SDKs for iOS, Android, React Native, and the web to embed verification into native apps. |
+**Kin Score 42.1** — developing · rubric 0.25.0 · scored 2026-10-23
 
-## Use Cases
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 63.2 |
+| Developer ergonomics | 76.2 |
+| Access clarity | 52.6 |
 
-| Name | Description |
-|------|-------------|
-| Fintech and Banking Onboarding | Customer onboarding and ongoing AML compliance for neobanks, payment institutions, and lenders. |
-| Crypto and Web3 Compliance | KYC, Travel Rule, and on-chain transaction monitoring for exchanges, wallets, and DeFi front-ends. |
-| iGaming and Sports Betting | Age verification, source-of-funds checks, and responsible gaming controls for licensed operators. |
-| Trading and Brokerage | Investor onboarding, accredited investor checks, and ongoing screening for FX, equity, and CFD platforms. |
-| Marketplaces and Mobility | Seller, driver, and host verification for two-sided marketplaces and ride-hailing or rental platforms. |
-| Regulated Enterprise Compliance | Centralized KYC/KYB/AML across multiple business lines under a unified case management workflow. |
+**Agent readiness 7.0** — agent-aware
 
-## Integrations
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | unknown |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
 
-| Name | Description |
-|------|-------------|
-| Auth0 | Integrate Sumsub with Auth0 to verify users before issuing authorization tokens. |
-| Salesforce | Push and pull applicant verification data inside Salesforce CRM workflows. |
-| Twilio | Send SMS-based communications and OTP challenges to applicants via Twilio. |
-| ComplyAdvantage | Bring-your-own-key integration with ComplyAdvantage screening data sources. |
-| World-Check One | Connect Sumsub to Refinitiv World-Check One watchlist data via BYOK. |
-| Quantifind | Augment AML screening with Quantifind risk intelligence via BYOK. |
-| Linea Verax Registry | On-chain identity verification attestations published to the Linea blockchain via the Sumsub Verax portal. |
+**Regulatory alignment 25.5** — Horizontal (data, software, accessibility, platform)
 
-## Solutions
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/sumsub/](https://apis.io/providers/sumsub/).
 
-| Name | Description |
-|------|-------------|
-| Basic Plan | Per-verification pricing for non-regulated businesses focused on fraud deterrence; $1.35 per verification with a $149 monthly minimum. |
-| Compliance Plan | For regulated businesses; adds AML screening, ongoing monitoring, and proof-of-address; $1.85 per verification with a $299 monthly minimum. |
-| Enterprise Plan | Custom-priced full-suite tier with negotiated volumes, SLAs, dedicated support, and data residency options. |
+## How this profile is made
 
-## SDKs and Tools (GitHub: SumSubstance)
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
 
-| Name | Language | Description |
-|------|----------|-------------|
-| [IdensicMobileSDK-iOS](https://github.com/SumSubstance/IdensicMobileSDK-iOS) | Swift | Sumsub's IdensicMobileSDK for iOS. |
-| [IdensicMobileSDK-iOS-Release](https://github.com/SumSubstance/IdensicMobileSDK-iOS-Release) | Swift | Release binaries of the IdensicMobileSDK for iOS. |
-| [IdensicMobileSDK-iOS-Core](https://github.com/SumSubstance/IdensicMobileSDK-iOS-Core) | Swift | Core iOS SDK component. |
-| [IdensicMobileSDK-iOS-VideoIdent](https://github.com/SumSubstance/IdensicMobileSDK-iOS-VideoIdent) | Swift | Video identification module for iOS. |
-| [IdensicMobileSDK-iOS-MRTDReader](https://github.com/SumSubstance/IdensicMobileSDK-iOS-MRTDReader) | Swift | MRTD (Machine-Readable Travel Document) reader for iOS. |
-| [IdensicMobileSDK-iOS-EID](https://github.com/SumSubstance/IdensicMobileSDK-iOS-EID) | Swift | Electronic ID module for iOS. |
-| [IdensicMobileSDK-iOS-Fisherman](https://github.com/SumSubstance/IdensicMobileSDK-iOS-Fisherman) | Swift | Fisherman fraud detection module. |
-| [IdensicMobileSDK-iOS-Demo](https://github.com/SumSubstance/IdensicMobileSDK-iOS-Demo) | Swift | iOS demo application for the IdensicMobileSDK. |
-| [idensic-mobile-sdk-sample-android](https://github.com/SumSubstance/idensic-mobile-sdk-sample-android) | Kotlin | Android sample integration for the mobile SDK. |
-| [react-native-mobilesdk-module](https://github.com/SumSubstance/react-native-mobilesdk-module) | Java | React Native module wrapping the native mobile SDKs. |
-| [AppTokenUsageExamples](https://github.com/SumSubstance/AppTokenUsageExamples) | Java | App Token authentication usage examples. |
-| [PostmanCollection](https://github.com/SumSubstance/PostmanCollection) | - | Official Postman collection for the Sumsub API. |
-| [TMandTRPostmanCollection](https://github.com/SumSubstance/TMandTRPostmanCollection) | - | Postman collection for Transaction Monitoring and Travel Rule APIs. |
-| [Specs](https://github.com/SumSubstance/Specs) | Ruby | Master repo of CocoaPods dependencies. |
-| [sumsub-linea-portal](https://github.com/SumSubstance/sumsub-linea-portal) | Solidity | Official Sumsub Verax portal smart contract for identity attestations on Linea. |
-| [Deepfake-Detectors-in-the-Wild](https://github.com/SumSubstance/Deepfake-Detectors-in-the-Wild) | Python | Research repository on deepfake detection. |
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Sumsub: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
 
-## Plans, Rate Limits, FinOps
+## Open an issue
 
-- [Plans and Pricing](plans/sumsub-plans-pricing.yml)
-- [Rate Limits](rate-limits/sumsub-rate-limits.yml)
-- [FinOps Framework](finops/sumsub-finops.yml)
-
-## Maintainers
-
-**FN:** Kin Lane
-
-**Email:** kin@apievangelist.com
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/sumsub/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
